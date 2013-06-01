@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WebViewController : UIViewController
+@interface WebViewController : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIButton *prevPage;
 @property (nonatomic, strong) IBOutlet UIButton *nextPage;
 @property (nonatomic, strong) IBOutlet UIButton *go;
 @property (nonatomic, strong) IBOutlet UITextField *addressField;
 @property (nonatomic, strong) IBOutlet UIWebView *webView;
+@property (nonatomic, strong) NSString *originalURL;
 
 - (IBAction)openWebsite:(id)sender;
 - (IBAction)gotoPrevPage:(id)sender;
